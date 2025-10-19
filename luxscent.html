@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LuxScent by Filip Peric</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Didot", "Times New Roman", serif;
+      background-color: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: #111;
+      text-align: center;
+      padding: 40px 20px;
+      border-bottom: 1px solid gold;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      color: gold;
+      letter-spacing: 3px;
+      margin: 0;
+    }
+    nav {
+      text-align: center;
+      background: #000;
+      padding: 15px 0;
+      border-bottom: 1px solid #222;
+    }
+    nav a {
+      color: gold;
+      text-decoration: none;
+      margin: 0 25px;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+      cursor: pointer;
+    }
+    nav a:hover {
+      color: white;
+    }
+
+    section {
+      display: none;
+      padding: 60px 10%;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    .hero {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+        url("https://images.unsplash.com/photo-1618354691517-7d6c2a59a0c0?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+      height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 3rem;
+      color: gold;
+      text-shadow: 0 0 15px rgba(255,215,0,0.7);
+    }
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin-top: 15px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+    .product {
+      background-color: #111;
+      border: 1px solid #333;
+      border-radius: 12px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .product:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px rgba(255,215,0,0.3);
+    }
+    .product img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .product h3 {
+      color: gold;
+      margin: 15px 0 5px;
+      font-size: 1.3rem;
+    }
+    .product p {
+      font-size: 1rem;
+      color: #ccc;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 20px;
+      color: #888;
+      border-top: 1px solid #222;
+    }
+    footer a {
+      color: gold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>LuxScent by Filip Peric</h1>
+  </header>
+
+  <nav>
+    <a onclick="showSection('start')">Startseite</a>
+    <a onclick="showSection('herren')">Herrendüfte</a>
+    <a onclick="showSection('damen')">Damendüfte</a>
+  </nav>
+
+  <!-- STARTSEITE -->
+  <section id="start" class="active">
+    <div class="hero">
+      <h2>Entdecke den Duft des Luxus</h2>
+      <p>LuxScent by Filip Peric – wo Eleganz, Stil und Leidenschaft aufeinandertreffen.  
+        Tauche ein in die Welt exklusiver Parfüms für Damen und Herren.</p>
+    </div>
+  </section>
+
+  <!-- HERREN -->
+  <section id="herren">
+    <h2 style="text-align:center; color:gold; margin-bottom:40px;">Herrendüfte</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1600181952428-8b4d9d6b88d4?auto=format&fit=crop&w=800&q=80" alt="Herrenduft 1">
+        <h3>Midnight Oud</h3>
+        <p>Ein tiefer, verführerischer Duft mit Noten von Leder und Oudholz.</p>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1585386959984-a41552231693?auto=format&fit=crop&w=800&q=80" alt="Herrenduft 2">
+        <h3>Royal Noir</h3>
+        <p>Eleganz in jeder Note – schwarzer Pfeffer, Zedernholz und Moschus.</p>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1619946794135-5bc917a27793?auto=format&fit=crop&w=800&q=80" alt="Herrenduft 3">
+        <h3>Golden Ember</h3>
+        <p>Wärme und Stärke in einer Flasche – perfekt für den modernen Gentleman.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAMEN -->
+  <section id="damen">
+    <h2 style="text-align:center; color:gold; margin-bottom:40px;">Damendüfte</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1618354691517-7d6c2a59a0c0?auto=format&fit=crop&w=800&q=80" alt="Damenduft 1">
+        <h3>Rose d'Or</h3>
+        <p>Ein femininer, blumiger Duft mit einem Hauch von Vanille und Jasmin.</p>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1620212181620-d1a5a1fbb3c3?auto=format&fit=crop&w=800&q=80" alt="Damenduft 2">
+        <h3>Velvet Bloom</h3>
+        <p>Sanft, sinnlich und elegant – die Essenz moderner Weiblichkeit.</p>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1600180758890-6e6d24a6a2a1?auto=format&fit=crop&w=800&q=80" alt="Damenduft 3">
+        <h3>Golden Whisper</h3>
+        <p>Ein luxuriöser Duft mit goldener Wärme und einer Spur Geheimnis.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 LuxScent by Filip Peric · Alle Rechte vorbehalten · 
+    <a href="#">Impressum</a>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>
